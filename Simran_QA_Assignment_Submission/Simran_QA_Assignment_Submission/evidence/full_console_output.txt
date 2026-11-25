@@ -1,0 +1,276 @@
+test_parallel_create_requests_for_same_user_and_plan_yield_one_live_trial (tests.test_concurrency.ConcurrencyTests.test_parallel_create_requests_for_same_user_and_plan_yield_one_live_trial) ... FAIL
+test_parallel_duplicate_webhooks_create_one_payment_and_one_activation (tests.test_concurrency.ConcurrencyTests.test_parallel_duplicate_webhooks_create_one_payment_and_one_activation) ... FAIL
+test_reconcile_rejects_invalid_provider_status (tests.test_reconcile.ReconcileAuthTests.test_reconcile_rejects_invalid_provider_status) ... ok
+test_reconcile_requires_valid_internal_key_and_changes_nothing_otherwise (tests.test_reconcile.ReconcileAuthTests.test_reconcile_requires_valid_internal_key_and_changes_nothing_otherwise) ... ok
+test_reconcile_unknown_order_fails_and_creates_nothing (tests.test_reconcile.ReconcileAuthTests.test_reconcile_unknown_order_fails_and_creates_nothing) ... ok
+test_reconcile_never_downgrades_active_trial (tests.test_reconcile.ReconcileIdempotencyTests.test_reconcile_never_downgrades_active_trial) ... ok
+test_reconcile_same_event_repeatedly_does_not_duplicate_payment_rows (tests.test_reconcile.ReconcileIdempotencyTests.test_reconcile_same_event_repeatedly_does_not_duplicate_payment_rows) ... FAIL
+test_reconcile_success_twice_is_idempotent (tests.test_reconcile.ReconcileIdempotencyTests.test_reconcile_success_twice_is_idempotent) ... ok
+test_reconcile_then_late_webhook_for_same_txn_records_payment_once (tests.test_reconcile.ReconcileIdempotencyTests.test_reconcile_then_late_webhook_for_same_txn_records_payment_once) ... FAIL
+test_reconcile_recovers_failed_trial_when_provider_says_success (tests.test_reconcile.ReconcileRecoveryTests.test_reconcile_recovers_failed_trial_when_provider_says_success) ... FAIL
+test_reconcile_recovers_pending_trial_when_webhook_was_missed (tests.test_reconcile.ReconcileRecoveryTests.test_reconcile_recovers_pending_trial_when_webhook_was_missed) ... ok
+test_admin_reset_requires_internal_key_and_does_not_wipe_data_without_it (tests.test_security_robustness.InternalEndpointSecurityTests.test_admin_reset_requires_internal_key_and_does_not_wipe_data_without_it) ... ok
+test_invalid_json_returns_400 (tests.test_security_robustness.MalformedInputTests.test_invalid_json_returns_400) ... ok
+test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing (tests.test_security_robustness.MalformedInputTests.test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing) ... 
+  test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing (tests.test_security_robustness.MalformedInputTests.test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing) (path='/api/trials') ... FAIL
+  test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing (tests.test_security_robustness.MalformedInputTests.test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing) (path='/api/webhooks/payment') ... FAIL
+  test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing (tests.test_security_robustness.MalformedInputTests.test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing) (path='/api/reconcile') ... FAIL
+test_amount_must_be_a_positive_integer (tests.test_trials.TrialCreationTests.test_amount_must_be_a_positive_integer) ... 
+  test_amount_must_be_a_positive_integer (tests.test_trials.TrialCreationTests.test_amount_must_be_a_positive_integer) (amount=0) ... FAIL
+  test_amount_must_be_a_positive_integer (tests.test_trials.TrialCreationTests.test_amount_must_be_a_positive_integer) (amount=-1) ... FAIL
+  test_amount_must_be_a_positive_integer (tests.test_trials.TrialCreationTests.test_amount_must_be_a_positive_integer) (amount=-100) ... FAIL
+  test_amount_must_be_a_positive_integer (tests.test_trials.TrialCreationTests.test_amount_must_be_a_positive_integer) (amount=True) ... FAIL
+  test_amount_must_be_a_positive_integer (tests.test_trials.TrialCreationTests.test_amount_must_be_a_positive_integer) (amount=False) ... FAIL
+test_create_trial_happy_path_persists_pending_trial (tests.test_trials.TrialCreationTests.test_create_trial_happy_path_persists_pending_trial) ... ok
+test_create_while_trial_is_active_does_not_create_second_live_trial (tests.test_trials.TrialCreationTests.test_create_while_trial_is_active_does_not_create_second_live_trial) ... FAIL
+test_invalid_requests_are_rejected_and_create_nothing (tests.test_trials.TrialCreationTests.test_invalid_requests_are_rejected_and_create_nothing) ... ok
+test_repeated_create_request_does_not_create_duplicate_live_trial (tests.test_trials.TrialCreationTests.test_repeated_create_request_does_not_create_duplicate_live_trial) ... FAIL
+test_same_user_can_hold_trials_for_different_plans_and_users_are_independent (tests.test_trials.TrialCreationTests.test_same_user_can_hold_trials_for_different_plans_and_users_are_independent) ... ok
+test_subscription_endpoint_returns_created_trial_and_404_for_unknown_user (tests.test_trials.TrialCreationTests.test_subscription_endpoint_returns_created_trial_and_404_for_unknown_user) ... ok
+test_user_can_start_a_new_trial_after_previous_one_failed (tests.test_trials.TrialCreationTests.test_user_can_start_a_new_trial_after_previous_one_failed) ... ok
+test_duplicate_webhook_delivery_is_idempotent (tests.test_webhooks.WebhookIdempotencyTests.test_duplicate_webhook_delivery_is_idempotent) ... FAIL
+test_provider_txn_id_cannot_be_reused_for_a_different_order (tests.test_webhooks.WebhookIdempotencyTests.test_provider_txn_id_cannot_be_reused_for_a_different_order) ... FAIL
+test_same_provider_txn_progressing_pending_to_success_is_one_payment_record (tests.test_webhooks.WebhookIdempotencyTests.test_same_provider_txn_progressing_pending_to_success_is_one_payment_record) ... FAIL
+test_late_failed_event_does_not_downgrade_active_trial (tests.test_webhooks.WebhookOutOfOrderTests.test_late_failed_event_does_not_downgrade_active_trial) ... FAIL
+test_late_pending_event_does_not_downgrade_active_trial (tests.test_webhooks.WebhookOutOfOrderTests.test_late_pending_event_does_not_downgrade_active_trial) ... FAIL
+test_replayed_old_events_after_success_never_downgrade (tests.test_webhooks.WebhookOutOfOrderTests.test_replayed_old_events_after_success_never_downgrade) ... FAIL
+test_webhook_with_wrong_signature_is_rejected_with_401_and_changes_nothing (tests.test_webhooks.WebhookSecurityTests.test_webhook_with_wrong_signature_is_rejected_with_401_and_changes_nothing) ... FAIL
+test_webhook_without_signature_is_rejected_with_401_and_changes_nothing (tests.test_webhooks.WebhookSecurityTests.test_webhook_without_signature_is_rejected_with_401_and_changes_nothing) ... FAIL
+test_failed_then_success_for_same_order_recovers_to_active (tests.test_webhooks.WebhookStateTests.test_failed_then_success_for_same_order_recovers_to_active) ... ok
+test_failed_webhook_marks_pending_trial_failed (tests.test_webhooks.WebhookStateTests.test_failed_webhook_marks_pending_trial_failed) ... ok
+test_invalid_webhook_payloads_are_rejected_without_state_change (tests.test_webhooks.WebhookStateTests.test_invalid_webhook_payloads_are_rejected_without_state_change) ... ok
+test_pending_webhook_keeps_trial_pending (tests.test_webhooks.WebhookStateTests.test_pending_webhook_keeps_trial_pending) ... ok
+test_success_webhook_activates_trial_and_records_payment (tests.test_webhooks.WebhookStateTests.test_success_webhook_activates_trial_and_records_payment) ... ok
+test_unknown_order_id_creates_no_payment_or_subscription_state (tests.test_webhooks.WebhookStateTests.test_unknown_order_id_creates_no_payment_or_subscription_state) ... ok
+
+======================================================================
+FAIL: test_parallel_create_requests_for_same_user_and_plan_yield_one_live_trial (tests.test_concurrency.ConcurrencyTests.test_parallel_create_requests_for_same_user_and_plan_yield_one_live_trial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_concurrency.py", line 17, in test_parallel_create_requests_for_same_user_and_plan_yield_one_live_trial
+    self.assertEqual(len(live), 1,
+AssertionError: 15 != 1 : BUG-01: 15 parallel identical requests created 15 live trials (HTTP codes: ['201'])
+
+======================================================================
+FAIL: test_parallel_duplicate_webhooks_create_one_payment_and_one_activation (tests.test_concurrency.ConcurrencyTests.test_parallel_duplicate_webhooks_create_one_payment_and_one_activation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_concurrency.py", line 28, in test_parallel_duplicate_webhooks_create_one_payment_and_one_activation
+    self.assertEqual(len(pays), 1,
+AssertionError: 15 != 1 : BUG-04: 15 simultaneous deliveries of one event created 15 payment rows
+
+======================================================================
+FAIL: test_reconcile_same_event_repeatedly_does_not_duplicate_payment_rows (tests.test_reconcile.ReconcileIdempotencyTests.test_reconcile_same_event_repeatedly_does_not_duplicate_payment_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_reconcile.py", line 65, in test_reconcile_same_event_repeatedly_does_not_duplicate_payment_rows
+    self.assertEqual(len(pays), 1,
+AssertionError: 3 != 1 : BUG-07: reconciling the same payment 3x created 3 payment rows
+
+======================================================================
+FAIL: test_reconcile_then_late_webhook_for_same_txn_records_payment_once (tests.test_reconcile.ReconcileIdempotencyTests.test_reconcile_then_late_webhook_for_same_txn_records_payment_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_reconcile.py", line 74, in test_reconcile_then_late_webhook_for_same_txn_records_payment_once
+    self.assertEqual(len(pays), 1,
+AssertionError: 2 != 1 : BUG-07: reconcile + late webhook for the same txn gave 2 payment rows
+
+======================================================================
+FAIL: test_reconcile_recovers_failed_trial_when_provider_says_success (tests.test_reconcile.ReconcileRecoveryTests.test_reconcile_recovers_failed_trial_when_provider_says_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_reconcile.py", line 45, in test_reconcile_recovers_failed_trial_when_provider_says_success
+    self.assertEqual(self.status_of("u_rec2"), "ACTIVE",
+AssertionError: 'FAILED' != 'ACTIVE'
+- FAILED
++ ACTIVE
+ : BUG-06: reconcile ignored FAILED record although provider reports SUCCESS (customer paid but has no access)
+
+======================================================================
+FAIL: test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing (tests.test_security_robustness.MalformedInputTests.test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing) (path='/api/trials')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_security_robustness.py", line 31, in test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing
+    self.assertEqual(resp.status, 400,
+AssertionError: None != 400 : BUG-09: body '[]' to /api/trials should be a clean 400, got <no response: RemoteDisconnected('Remote end closed connection without response')>
+
+======================================================================
+FAIL: test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing (tests.test_security_robustness.MalformedInputTests.test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing) (path='/api/webhooks/payment')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_security_robustness.py", line 31, in test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing
+    self.assertEqual(resp.status, 400,
+AssertionError: None != 400 : BUG-09: body '[]' to /api/webhooks/payment should be a clean 400, got <no response: RemoteDisconnected('Remote end closed connection without response')>
+
+======================================================================
+FAIL: test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing (tests.test_security_robustness.MalformedInputTests.test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing) (path='/api/reconcile')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_security_robustness.py", line 31, in test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing
+    self.assertEqual(resp.status, 400,
+AssertionError: None != 400 : BUG-09: body '[]' to /api/reconcile should be a clean 400, got <no response: RemoteDisconnected('Remote end closed connection without response')>
+
+======================================================================
+FAIL: test_amount_must_be_a_positive_integer (tests.test_trials.TrialCreationTests.test_amount_must_be_a_positive_integer) (amount=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_trials.py", line 51, in test_amount_must_be_a_positive_integer
+    self.assertEqual(
+AssertionError: 201 != 400 : BUG-08: amount=0 must be rejected with 400, got <HTTP 201 {"order_id": "ord_04b88c7d9a30", "status": "PENDING"}>; stored rows: [{'id': 1, 'order_id': 'ord_04b88c7d9a30', 'user_id': 'u_amt_0', 'plan': 'yearly', 'amount': 0, 'status': 'PENDING', 'created_at': 1795519663.1494489, 'updated_at': 1795519663.1494489}]
+
+======================================================================
+FAIL: test_amount_must_be_a_positive_integer (tests.test_trials.TrialCreationTests.test_amount_must_be_a_positive_integer) (amount=-1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_trials.py", line 51, in test_amount_must_be_a_positive_integer
+    self.assertEqual(
+AssertionError: 201 != 400 : BUG-08: amount=-1 must be rejected with 400, got <HTTP 201 {"order_id": "ord_07ba9b43d2e9", "status": "PENDING"}>; stored rows: [{'id': 2, 'order_id': 'ord_07ba9b43d2e9', 'user_id': 'u_amt_1', 'plan': 'yearly', 'amount': -1, 'status': 'PENDING', 'created_at': 1795519663.1528506, 'updated_at': 1795519663.1528506}]
+
+======================================================================
+FAIL: test_amount_must_be_a_positive_integer (tests.test_trials.TrialCreationTests.test_amount_must_be_a_positive_integer) (amount=-100)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_trials.py", line 51, in test_amount_must_be_a_positive_integer
+    self.assertEqual(
+AssertionError: 201 != 400 : BUG-08: amount=-100 must be rejected with 400, got <HTTP 201 {"order_id": "ord_6ad32d651dc7", "status": "PENDING"}>; stored rows: [{'id': 3, 'order_id': 'ord_6ad32d651dc7', 'user_id': 'u_amt_2', 'plan': 'yearly', 'amount': -100, 'status': 'PENDING', 'created_at': 1795519663.1561098, 'updated_at': 1795519663.1561098}]
+
+======================================================================
+FAIL: test_amount_must_be_a_positive_integer (tests.test_trials.TrialCreationTests.test_amount_must_be_a_positive_integer) (amount=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_trials.py", line 51, in test_amount_must_be_a_positive_integer
+    self.assertEqual(
+AssertionError: 201 != 400 : BUG-08: amount=True must be rejected with 400, got <HTTP 201 {"order_id": "ord_a053e37bf753", "status": "PENDING"}>; stored rows: [{'id': 4, 'order_id': 'ord_a053e37bf753', 'user_id': 'u_amt_3', 'plan': 'yearly', 'amount': 1, 'status': 'PENDING', 'created_at': 1795519663.1606395, 'updated_at': 1795519663.1606395}]
+
+======================================================================
+FAIL: test_amount_must_be_a_positive_integer (tests.test_trials.TrialCreationTests.test_amount_must_be_a_positive_integer) (amount=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_trials.py", line 51, in test_amount_must_be_a_positive_integer
+    self.assertEqual(
+AssertionError: 201 != 400 : BUG-08: amount=False must be rejected with 400, got <HTTP 201 {"order_id": "ord_67351e2023a2", "status": "PENDING"}>; stored rows: [{'id': 5, 'order_id': 'ord_67351e2023a2', 'user_id': 'u_amt_4', 'plan': 'yearly', 'amount': 0, 'status': 'PENDING', 'created_at': 1795519663.164086, 'updated_at': 1795519663.164086}]
+
+======================================================================
+FAIL: test_create_while_trial_is_active_does_not_create_second_live_trial (tests.test_trials.TrialCreationTests.test_create_while_trial_is_active_does_not_create_second_live_trial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_trials.py", line 75, in test_create_while_trial_is_active_does_not_create_second_live_trial
+    self.assertEqual(len(live), 1, "BUG-01: found %d live trials: %s"
+AssertionError: 2 != 1 : BUG-01: found 2 live trials: [('ord_0d617a8b0a5f', 'ACTIVE'), ('ord_ca44705118e3', 'PENDING')]
+
+======================================================================
+FAIL: test_repeated_create_request_does_not_create_duplicate_live_trial (tests.test_trials.TrialCreationTests.test_repeated_create_request_does_not_create_duplicate_live_trial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_trials.py", line 64, in test_repeated_create_request_does_not_create_duplicate_live_trial
+    self.assertEqual(
+AssertionError: 2 != 1 : BUG-01: expected exactly 1 live trial for same user+plan after a retry, found 2: ['ord_aec6ccb71ee3', 'ord_9f6f3f7c38f6']
+
+======================================================================
+FAIL: test_duplicate_webhook_delivery_is_idempotent (tests.test_webhooks.WebhookIdempotencyTests.test_duplicate_webhook_delivery_is_idempotent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_webhooks.py", line 82, in test_duplicate_webhook_delivery_is_idempotent
+    self.assertEqual(len(pays), 1,
+AssertionError: 3 != 1 : BUG-04: same event delivered 3x produced 3 payment rows
+
+======================================================================
+FAIL: test_provider_txn_id_cannot_be_reused_for_a_different_order (tests.test_webhooks.WebhookIdempotencyTests.test_provider_txn_id_cannot_be_reused_for_a_different_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_webhooks.py", line 104, in test_provider_txn_id_cannot_be_reused_for_a_different_order
+    self.assertEqual(len(all_rows), 1,
+AssertionError: 2 != 1 : BUG-05: txn_shared recorded for 2 orders: ['ord_1427c286f3aa', 'ord_d318e0415788']
+
+======================================================================
+FAIL: test_same_provider_txn_progressing_pending_to_success_is_one_payment_record (tests.test_webhooks.WebhookIdempotencyTests.test_same_provider_txn_progressing_pending_to_success_is_one_payment_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_webhooks.py", line 91, in test_same_provider_txn_progressing_pending_to_success_is_one_payment_record
+    self.assertEqual(len(pays), 1,
+AssertionError: 2 != 1 : BUG-05: one provider_txn_id must be ONE payment; found rows: ['PENDING', 'SUCCESS']
+
+======================================================================
+FAIL: test_late_failed_event_does_not_downgrade_active_trial (tests.test_webhooks.WebhookOutOfOrderTests.test_late_failed_event_does_not_downgrade_active_trial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_webhooks.py", line 126, in test_late_failed_event_does_not_downgrade_active_trial
+    self.assertEqual(self.status_of("u_ooo2"), "ACTIVE",
+AssertionError: 'FAILED' != 'ACTIVE'
+- FAILED
++ ACTIVE
+ : BUG-02: late FAILED downgraded a paid, ACTIVE trial
+
+======================================================================
+FAIL: test_late_pending_event_does_not_downgrade_active_trial (tests.test_webhooks.WebhookOutOfOrderTests.test_late_pending_event_does_not_downgrade_active_trial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_webhooks.py", line 118, in test_late_pending_event_does_not_downgrade_active_trial
+    self.assertEqual(self.status_of("u_ooo1"), "ACTIVE",
+AssertionError: 'PENDING' != 'ACTIVE'
+- PENDING
++ ACTIVE
+ : BUG-02: late PENDING downgraded an ACTIVE trial
+
+======================================================================
+FAIL: test_replayed_old_events_after_success_never_downgrade (tests.test_webhooks.WebhookOutOfOrderTests.test_replayed_old_events_after_success_never_downgrade)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_webhooks.py", line 134, in test_replayed_old_events_after_success_never_downgrade
+    self.assertEqual(self.status_of("u_ooo3"), "ACTIVE",
+AssertionError: 'FAILED' != 'ACTIVE'
+- FAILED
++ ACTIVE
+ : BUG-02: final state after replayed events must stay ACTIVE
+
+======================================================================
+FAIL: test_webhook_with_wrong_signature_is_rejected_with_401_and_changes_nothing (tests.test_webhooks.WebhookSecurityTests.test_webhook_with_wrong_signature_is_rejected_with_401_and_changes_nothing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_webhooks.py", line 68, in test_webhook_with_wrong_signature_is_rejected_with_401_and_changes_nothing
+    self.assertEqual(resp.status, 401, "BUG-03: wrongly signed webhook got %r" % resp)
+AssertionError: 200 != 401 : BUG-03: wrongly signed webhook got <HTTP 200 {"status": "processed"}>
+
+======================================================================
+FAIL: test_webhook_without_signature_is_rejected_with_401_and_changes_nothing (tests.test_webhooks.WebhookSecurityTests.test_webhook_without_signature_is_rejected_with_401_and_changes_nothing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude/animal-qa-submission/tests/test_webhooks.py", line 59, in test_webhook_without_signature_is_rejected_with_401_and_changes_nothing
+    self.assertEqual(resp.status, 401, "BUG-03: unsigned webhook got %r" % resp)
+AssertionError: 200 != 401 : BUG-03: unsigned webhook got <HTTP 200 {"status": "processed"}>
+
+----------------------------------------------------------------------
+Ran 36 tests in 3.000s
+
+FAILED (failures=23)
+
+Subscription Reliability API - test report
+Ran 36 tests in 3.0s: 19 passed, 17 failed
+
+Failures grouped by defect (see BUGS.md):
+  BUG-01
+      - test_concurrency.ConcurrencyTests.test_parallel_create_requests_for_same_user_and_plan_yield_one_live_trial
+      - test_trials.TrialCreationTests.test_create_while_trial_is_active_does_not_create_second_live_trial
+      - test_trials.TrialCreationTests.test_repeated_create_request_does_not_create_duplicate_live_trial
+  BUG-02
+      - test_webhooks.WebhookOutOfOrderTests.test_late_failed_event_does_not_downgrade_active_trial
+      - test_webhooks.WebhookOutOfOrderTests.test_late_pending_event_does_not_downgrade_active_trial
+      - test_webhooks.WebhookOutOfOrderTests.test_replayed_old_events_after_success_never_downgrade
+  BUG-03
+      - test_webhooks.WebhookSecurityTests.test_webhook_with_wrong_signature_is_rejected_with_401_and_changes_nothing
+      - test_webhooks.WebhookSecurityTests.test_webhook_without_signature_is_rejected_with_401_and_changes_nothing
+  BUG-04
+      - test_concurrency.ConcurrencyTests.test_parallel_duplicate_webhooks_create_one_payment_and_one_activation
+      - test_webhooks.WebhookIdempotencyTests.test_duplicate_webhook_delivery_is_idempotent
+  BUG-05
+      - test_webhooks.WebhookIdempotencyTests.test_provider_txn_id_cannot_be_reused_for_a_different_order
+      - test_webhooks.WebhookIdempotencyTests.test_same_provider_txn_progressing_pending_to_success_is_one_payment_record
+  BUG-06
+      - test_reconcile.ReconcileRecoveryTests.test_reconcile_recovers_failed_trial_when_provider_says_success
+  BUG-07
+      - test_reconcile.ReconcileIdempotencyTests.test_reconcile_same_event_repeatedly_does_not_duplicate_payment_rows
+      - test_reconcile.ReconcileIdempotencyTests.test_reconcile_then_late_webhook_for_same_txn_records_payment_once
+  BUG-08
+      - test_trials.TrialCreationTests.test_amount_must_be_a_positive_integer
+  BUG-09
+      - test_security_robustness.MalformedInputTests.test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing

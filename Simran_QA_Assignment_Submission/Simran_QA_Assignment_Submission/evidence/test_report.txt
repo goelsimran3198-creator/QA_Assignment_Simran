@@ -1,0 +1,30 @@
+Subscription Reliability API - test report
+Ran 36 tests in 6.4s: 19 passed, 17 failed
+
+Failures grouped by defect (see BUGS.md):
+  BUG-01
+      - test_concurrency.ConcurrencyTests.test_parallel_create_requests_for_same_user_and_plan_yield_one_live_trial
+      - test_trials.TrialCreationTests.test_create_while_trial_is_active_does_not_create_second_live_trial
+      - test_trials.TrialCreationTests.test_repeated_create_request_does_not_create_duplicate_live_trial
+  BUG-02
+      - test_webhooks.WebhookOutOfOrderTests.test_late_failed_event_does_not_downgrade_active_trial
+      - test_webhooks.WebhookOutOfOrderTests.test_late_pending_event_does_not_downgrade_active_trial
+      - test_webhooks.WebhookOutOfOrderTests.test_replayed_old_events_after_success_never_downgrade
+  BUG-03
+      - test_webhooks.WebhookSecurityTests.test_webhook_with_wrong_signature_is_rejected_with_401_and_changes_nothing
+      - test_webhooks.WebhookSecurityTests.test_webhook_without_signature_is_rejected_with_401_and_changes_nothing
+  BUG-04
+      - test_concurrency.ConcurrencyTests.test_parallel_duplicate_webhooks_create_one_payment_and_one_activation
+      - test_webhooks.WebhookIdempotencyTests.test_duplicate_webhook_delivery_is_idempotent
+  BUG-05
+      - test_webhooks.WebhookIdempotencyTests.test_provider_txn_id_cannot_be_reused_for_a_different_order
+      - test_webhooks.WebhookIdempotencyTests.test_same_provider_txn_progressing_pending_to_success_is_one_payment_record
+  BUG-06
+      - test_reconcile.ReconcileRecoveryTests.test_reconcile_recovers_failed_trial_when_provider_says_success
+  BUG-07
+      - test_reconcile.ReconcileIdempotencyTests.test_reconcile_same_event_repeatedly_does_not_duplicate_payment_rows
+      - test_reconcile.ReconcileIdempotencyTests.test_reconcile_then_late_webhook_for_same_txn_records_payment_once
+  BUG-08
+      - test_trials.TrialCreationTests.test_amount_must_be_a_positive_integer
+  BUG-09
+      - test_security_robustness.MalformedInputTests.test_valid_json_that_is_not_an_object_returns_400_instead_of_crashing

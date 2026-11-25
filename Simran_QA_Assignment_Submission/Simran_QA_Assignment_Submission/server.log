@@ -1,0 +1,263 @@
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 64409)
+Traceback (most recent call last):
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\goels\Downloads\animal-qa-submission\animal-qa-submission\server.py", line 142, in do_POST
+    user_id = str(body.get('user_id', '')).strip()
+                  ^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 64410)
+Traceback (most recent call last):
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\goels\Downloads\animal-qa-submission\animal-qa-submission\server.py", line 161, in do_POST
+    order_id = str(body.get('order_id', '')).strip()
+                   ^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 64411)
+Traceback (most recent call last):
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\goels\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\goels\Downloads\animal-qa-submission\animal-qa-submission\server.py", line 190, in do_POST
+    order_id = str(body.get('order_id', '')).strip()
+                   ^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+----------------------------------------
+QA challenge API running at http://127.0.0.1:18080
+Reset data with: POST /api/admin/reset and header X-Internal-Key: qa-internal
+127.0.0.1 - - [24/Nov/2026 17:54:05] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:05] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:05] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:05] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:05] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:05] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:05] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:05] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:05] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:05] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:05] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "GET /api/debug/trials?user_id=u_race HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "GET /api/subscriptions/u_race_wh HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "GET /api/debug/payments?order_id=ord_92bc9e97a1ff HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/reconcile HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "GET /api/subscriptions/u_rinv HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/reconcile HTTP/1.1" 401 -
+127.0.0.1 - - [24/Nov/2026 17:54:06] "POST /api/reconcile HTTP/1.1" 401 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/subscriptions/u_rauth HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/debug/payments?order_id=ord_51481d41a035 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/reconcile HTTP/1.1" 404 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/debug/payments HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/reconcile HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/reconcile HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/subscriptions/u_rdown HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/reconcile HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/reconcile HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/reconcile HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/debug/payments?order_id=ord_70b39c7b6134 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/reconcile HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/reconcile HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/subscriptions/u_ridem HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/debug/payments?order_id=ord_841dddbbf2d9 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/reconcile HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/debug/payments?order_id=ord_bedebebc02f4 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/subscriptions/u_rec2 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/reconcile HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/subscriptions/u_rec2 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/reconcile HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/subscriptions/u_rec1 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/debug/payments?order_id=ord_aec967ebb95d HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 401 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 401 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/debug/trials?user_id=u_keep HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/webhooks/payment HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/reconcile HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/debug/trials?user_id=u_amt_0 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/debug/trials?user_id=u_amt_1 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/debug/trials?user_id=u_amt_2 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/debug/trials?user_id=u_amt_3 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "GET /api/debug/trials?user_id=u_amt_4 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:07] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/debug/trials?user_id=u_happy HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/debug/trials?user_id=u_active_retry HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/debug/trials HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/debug/trials?user_id=u_retry HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/debug/trials?user_id=u_multi HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/debug/trials?user_id=u_other HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/subscriptions/u_read HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/subscriptions/nobody HTTP/1.1" 404 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/debug/trials?user_id=u_failed HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/subscriptions/u_dup HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/debug/payments?order_id=ord_0514fefb91f7 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/debug/payments HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/debug/payments?order_id=ord_10786f4af8bb HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/subscriptions/u_ooo2 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/subscriptions/u_ooo1 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /api/subscriptions/u_ooo3 HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:08] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "GET /api/subscriptions/u_retrypay HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "POST /api/webhooks/payment HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "GET /api/subscriptions/u_fail HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "POST /api/admin/reset HTTP/1.1" 200 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "POST /api/trials HTTP/1.1" 201 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "POST /api/webhooks/payment HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "POST /api/webhooks/payment HTTP/1.1" 400 -
+127.0.0.1 - - [24/Nov/2026 17:54:09] "POST /api/webhooks/payment HTTP/1.1" 400 -

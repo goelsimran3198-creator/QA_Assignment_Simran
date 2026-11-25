@@ -1,0 +1,5 @@
+Subscription Reliability API - test report
+Ran 36 tests in 3.0s: 36 passed, 0 failed
+
+Failures grouped by defect (see BUGS.md):
+  none

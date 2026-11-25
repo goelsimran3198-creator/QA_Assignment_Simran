@@ -1,0 +1,34 @@
+### E1 BUG-01 duplicate live trials (same user+plan, two identical POSTs)
+{"order_id": "ord_6cb63d836068", "status": "PENDING"}
+{"order_id": "ord_075b2d4e1921", "status": "PENDING"}
+{"trials": [{"id": 1, "order_id": "ord_6cb63d836068", "user_id": "user_123", "plan": "yearly", "amount": 100, "status": "PENDING", "created_at": 1795519634.7770386, "updated_at": 1795519634.7770386}, {"id": 2, "order_id": "ord_075b2d4e1921", "user_id": "user_123", "plan": "yearly", "amount": 100, "status": "PENDING", "created_at": 1795519634.7859755, "updated_at": 1795519634.7859755}]}
+
+### E2 BUG-03 webhook with NO X-Signature header activates a trial
+HTTP/1.0 200 OK
+{"status": "processed"}{"id": 3, "order_id": "ord_f3cc57f69eef", "user_id": "user_nosig", "plan": "monthly", "amount": 100, "status": "ACTIVE", "created_at": 1795519634.8037546, "updated_at": 1795519634.8280077}
+
+### E3 BUG-02 + BUG-04: duplicate SUCCESS then late FAILED on same order
+{"status": "processed"}
+{"status": "processed"}
+{"status": "processed"}
+{"id": 4, "order_id": "ord_f090be8f873a", "user_id": "user_dg", "plan": "monthly", "amount": 100, "status": "FAILED", "created_at": 1795519634.843696, "updated_at": 1795519634.8770194}
+{"payments": [{"id": 2, "order_id": "ord_f090be8f873a", "provider_txn_id": "txn_001", "provider_status": "SUCCESS", "received_at": 1795519634.8657131}, {"id": 3, "order_id": "ord_f090be8f873a", "provider_txn_id": "txn_001", "provider_status": "SUCCESS", "received_at": 1795519634.8712943}, {"id": 4, "order_id": "ord_f090be8f873a", "provider_txn_id": "txn_001", "provider_status": "FAILED", "received_at": 1795519634.8770194}]}
+
+### E4 BUG-06 reconcile SUCCESS on a FAILED trial is a no-op (still returns 200 'reconciled')
+{"status": "processed"}
+{"status": "reconciled"}
+{"id": 5, "order_id": "ord_eafad1ac4bd0", "user_id": "user_rec", "plan": "monthly", "amount": 100, "status": "FAILED", "created_at": 1795519634.8966298, "updated_at": 1795519634.919394}
+
+### E5 BUG-08 invalid amounts accepted
+{"order_id": "ord_54242704ec26", "status": "PENDING"} <- amount=0
+{"order_id": "ord_a67205fdb01f", "status": "PENDING"} <- amount=-500
+{"order_id": "ord_7260fd4e57d5", "status": "PENDING"} <- amount=true
+u_amt0 0
+u_amt-500 -500
+u_amttrue 1
+
+### E6 BUG-09 JSON body '[]' -> no HTTP response at all
+curl exit code: 52 (52 = empty reply from server)
+
+### E7 OBS-1 read endpoints need no auth (any user's subscription + all debug data)
+{"payments": [{"id": 1, "order_id": "ord_f3cc57f69eef", "provider_txn_id": "txn_x", "provider_status": "SUCCESS", "received_at": 1795519634.8280077}, {"id": 2, "order_id": "ord_f090be8f873a", "provide
